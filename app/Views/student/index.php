@@ -5,7 +5,7 @@
 <h1 class="h3 mb-2 text-gray-800">Data murid kelas 8.C</h1>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <a href="<?= base_url(); ?>/StudentController/create">Tambah data</a>
+        <a href="<?= base_url(); ?>/student/create">Tambah data</a>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -37,11 +37,11 @@
                             <td><?= $d['email']; ?></td>
                             <td><?= $d['telp']; ?></td>
                             <td>
-                                <form action="StudentController/edit/<?= $d['id']; ?>" method="post">
+                                <form action="student/edit/<?= $d['id']; ?>" method="post">
                                     <input type="hidden" name="_method" value="PUT">
                                     <button class="btn btn-success">Ubah</button>
                                 </form>
-                                <form action="StudentController/destroy/<?= $d['id']; ?>" method="POST">
+                                <form action="student/delete/<?= $d['id']; ?>" method="POST">
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button class="btn btn-danger">Hapus</button>
                                 </form>

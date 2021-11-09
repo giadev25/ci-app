@@ -42,9 +42,9 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?= base_url(); ?>/StudentController">
+                <a class="nav-link" href="<?= base_url(); ?>/student">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Data absen kelas 8C</span></a>
+                    <span>Data Kelas 8C</span></a>
             </li>
 
 

@@ -32,8 +32,16 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->delete('/StudentController/destroy', 'StudentController::destroy');
-$routes->put('/StudentController/edit/(:num)', 'StudentController::edit/$1');
+
+// Route untuk student controller
+$routes->get('/student', 'StudentController::index');
+$routes->get('/student/create', 'StudentController::create');
+$routes->put('/student/edit/(:num)', 'StudentController::edit/$1');
+$routes->delete('/student/delete/(:num)', 'StudentController::destroy/$1');
+
+// Route untuk auth controller
+$routes->get('/login', 'Auth::login');
+$routes->get('/registration', 'Auth::registration');
 
 /*
  * --------------------------------------------------------------------
