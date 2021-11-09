@@ -23,6 +23,10 @@ class Users extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
+            'image'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+            ],
             'status'       => [
                 'type'       => 'INT',
                 'constraint' => '11',
@@ -42,11 +46,11 @@ class Users extends Migration
             ]
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('user');
+        $this->forge->createTable('users');
     }
 
     public function down()
     {
-        $this->forge->dropTable('user');
+        $this->forge->dropTable('users');
     }
 }
